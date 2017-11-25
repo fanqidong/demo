@@ -1,0 +1,107 @@
+/*
+ CSS: Cascading Style Sheet
+ 层叠样式表单，通过一些列选择器以及属性的
+ 组合对HTML页面样式以及效果进行渲染
+ */
+*{
+	padding:0;
+	margin:0;
+}
+/*元素选择器、标签选择器*/
+header{
+	height:50px;	/*设置高度*/
+	background-color:#2ecc71;/*背景颜色*/
+	text-align:center;/*文本居中*/
+	line-height: 50px;/*行高*/
+	font-size:2em;/*字体大小*/
+	font-family: 楷体;/*字体类型*/
+	font-weight: 900;/*字体粗细度*/
+	color:#fff;/*字体颜色*/
+}
+body{
+	background:url(../img/wall.jpg);
+}
+
+/*类选择器*/
+.photo-box{
+	position:relative;/*相对定位*/
+	min-width: 960px;/*最小宽度*/
+	width: 80%;/*设置宽度占据父容器80%*/
+	margin:0 auto;/*元素水平居中*/
+	padding:50px 20px;/*内边距20px*/
+}
+/*子选择器*/
+.photo-box>img{
+	position:relative;
+	float:left;/*左浮动*/
+	z-index: 0;/*初始化层叠位置*/
+	width:240px;
+	height: 180px;
+	border:8px solid #eee;/*设置边框:线条宽度 线条样式(实线，虚线，双线,点线) 线条颜色*/
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.2);/*盒子阴影:x轴平移 y轴平移 颜色模糊值 颜色*/
+	transition:all 1.5s;/*设置过渡*/
+	cursor:pointer;/*设置鼠标指针为手指*/
+}
+
+/*伪类选择器*/
+.photo-box>img:hover{
+	transform: scale(2.0);/*放大2倍*/
+	z-index:9999;/*浮动到顶层*/
+}
+
+.p1{transform:rotate(20deg);}
+.p2{transform:rotate(10deg);}
+.p3{transform:rotate(-20deg);}
+.p4{transform:rotate(-15deg);}
+.p5{transform:rotate(8deg);}
+.p6{transform:rotate(6deg);}
+.p7{transform:rotate(-22deg);}
+.p8{transform:rotate(-15deg);}
+.p9{transform:rotate(-9deg);}
+.p10{transform:rotate(-17deg);}
+.p11{transform:rotate(28deg);}
+.p12{transform:rotate(30deg);}
+
+.music-box{
+	position:absolute;/*绝对定位*/
+	right:20px;
+	top:70px;
+	width:50px;
+	height:50px;
+	overflow: hidden;
+	background-color: #d2d2d2;
+	border-radius:50%;
+	border:2px solid #fff;
+	cursor: pointer;
+}
+.music-box>img{
+	width:100%;
+	height:100%;
+}
+
+.play{
+	animation:music-play 5s infinite linear;	
+}
+
+/*自定义动画*/
+@keyframes music-play{
+	from{transform:rotate(0deg);}
+	to{transform:rotate(360deg);}
+}
+/*模态窗体的样式*/
+.modal{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:10001;
+	width:100%;
+	min-width: 960px;
+	text-align: center;
+	background-color:rgba(0,0,0,.8);
+}
+
+.img-item{
+	position:absolute;
+	top:50%;
+	left:50%;
+}

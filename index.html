@@ -1,0 +1,61 @@
+<!--
+	HTML:HyperText Markup Language
+	html1.0~html4.01  W3C
+	XHTML1.0(xml+html)~XHTML2.0
+	WHATWG---HTML5(非SGML)
+	XML/HTML--SGML（标准通用标记语言 dtd/xsd）
+	
+	HTML5 肉身
+	CSS3 服装，装饰
+	JavaScript 灵魂
+	
+	
+	HTML文档流的方式是默认从左向右的一种流式布局(文档流)，具体的
+	呈现方式根据元素自身的类型决定(行，块)
+	行级元素(行内元素):元素在正常的文档流中一次向后排列
+	块级元素：元素在正常的文档流中独占一行
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>我的相册</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+	</head>
+	<body>
+		<header>
+			<span>武生院相册 </span>
+		</header>
+		
+		<div class="photo-box">
+			<img src="img/photo/001.jpg" class="p1"/>
+			<img src="img/photo/002.jpg" class="p2"/>
+			<img src="img/photo/003.jpg" class="p3"/>
+			<img src="img/photo/010.jpg" class="p4"/>
+			<img src="img/photo/005.jpg" class="p5"/>
+			<img src="img/photo/006.jpg" class="p6"/>
+			<img src="img/photo/011.jpg" class="p7"/>
+			<img src="img/photo/008.jpg" class="p8"/>
+			<img src="img/photo/009.jpg" class="p9"/>
+			<img src="img/photo/012.jpg" class="p10"/>
+			<img src="img/photo/013.jpg" class="p11"/>
+			<img src="img/photo/014.jpg" class="p12"/>
+		</div>
+		<!--背景音乐盒编辑区-->
+		<div class="music-box play" id="musicBox" title="点击静音">
+			<img src="img/icon.png">
+			<!--
+			h5新增的音频标签
+			src:指定音频文件资源路径
+			loop:循环次数
+			autoplay：自动播放
+			-->
+			<audio id="player" src="music/bgmusic.mp3" loop="-1" autoplay></audio>
+		</div>
+		
+		
+		<!-- 导入js文件 -->
+		<script src="js/index.js"></script>
+	</body>
+</html>	
